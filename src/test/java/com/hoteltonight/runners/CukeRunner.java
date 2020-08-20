@@ -1,4 +1,4 @@
-package com.hotelstonight.runners;
+package com.hoteltonight.runners;
 
 import org.junit.runner.RunWith;
 
@@ -11,8 +11,8 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @CucumberOptions(
 		tags = "@temp",
 		
-		features = "src/test/resources/com/hotelstonight/features",
-		glue = "com/hotelstonight/stepDefs",
+		features = "src/test/resources/com/hoteltonight/features",
+		glue = "com/hoteltonight/stepDefs",
 		plugin = {"summary", 
 				 "pretty",
 				 "html:target/builtInReport",

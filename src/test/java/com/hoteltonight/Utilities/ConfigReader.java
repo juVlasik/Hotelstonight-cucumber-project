@@ -1,4 +1,4 @@
-package com.hotelstonight.Utilities;
+package com.hoteltonight.Utilities;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
