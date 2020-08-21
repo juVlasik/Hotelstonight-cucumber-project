@@ -55,10 +55,48 @@ public class LoginStepDefinitions {
 	    Assert.assertEquals(expected, actual);
 	}
 
+
 	@When("click on Continue button")
 	public void clickOnContinueButton() {
 		new HomePage().continueButton.click();
 		BrowserUtilities.waitFor(5);
 	}
+
+	
+	
+	
+	
+	@Then("verify another message")
+	public void verifyAnotherMessage() {
+	   String expected = "One tap, you’re in";
+	   String actual = new HomePage().message3.getText();
+	}
+
+	@Then("click on Sign In button again")
+	public void clickOnSignInButtonAgain() {
+		new HomePage().signInConfirm.click();
+		BrowserUtilities.waitFor(5);
+	}
+
+	@Then("type password in the input box")
+	public void typePasswordInTheInputBox() {
+		Faker f = new Faker();
+		BrowserUtilities.waitFor(5);
+		new HomePage().signPasswordField.sendKeys(f.name().username());
+	}
+
+	@Then("click on Sign In button one more time")
+	public void clickOnSignInButtonOneMoreTime() {
+		new HomePage().signInConfirm2.click();
+		BrowserUtilities.waitFor(5);
+	}
+
+	@Then("verify the error message")
+	public void verifyTheErrorMessage() {
+		   String expected = "Invalid email or password.";
+		   String actual = new HomePage().message4.getText();
+	}
+	
+
 
 }
