@@ -1,6 +1,6 @@
   Feature: Login feature
   As a customer, I want to be able to login using login pop-up
-  @temp
+
   Scenario: negative login test
   
     Given I am on home page
