@@ -15,6 +15,7 @@ public class LoginStepDefinitions {
 	
 	@Given("I am on home page")
 	public void iAmOnHomePage() {
+		
 		Driver.getDriver().get(ConfigReader.getProperty("url"));
 		BrowserUtilities.waitFor(5);
 	}
@@ -32,12 +33,6 @@ public class LoginStepDefinitions {
 	    Faker f = new Faker();
 	    HomePage hp = new HomePage();
 	    hp.signInEmailField.sendKeys(f.name().username() + "@mail.ru");
-	}
-
-	@When("click on Continue button")
-	public void clickOnContinueButton() {
-		new HomePage().continueButton.click();
-		BrowserUtilities.waitFor(5);
 	}
 
 	@Then("verify the message")
@@ -59,7 +54,11 @@ public class LoginStepDefinitions {
 	    String expected = "We sent you a link that will log you in with one tap.";
 	    Assert.assertEquals(expected, actual);
 	}
-	
-	
+
+	@When("click on Continue button")
+	public void clickOnContinueButton() {
+		new HomePage().continueButton.click();
+		BrowserUtilities.waitFor(5);
+	}
 
 }
