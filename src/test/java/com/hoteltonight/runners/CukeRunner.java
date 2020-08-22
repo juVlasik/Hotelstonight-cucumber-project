@@ -9,7 +9,11 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+<<<<<<< HEAD
 		//tags = "@temp",
+=======
+		tags = "@saha",
+>>>>>>> 422cdad08f5067894113754e32eba268c303767c
 		
 		features = "src/test/resources/com/hoteltonight/features",
 		glue = "com/hoteltonight/stepDefs",

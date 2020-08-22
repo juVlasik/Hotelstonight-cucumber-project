@@ -2,7 +2,6 @@
   Feature: Login feature
   As a customer, I want to be able to login using login pop-up
 
-
   Scenario: negative login test
   
     Given I am on home page
@@ -25,3 +24,4 @@
     Then type password in the input box
     Then click on Sign In button one more time
     And verify the error message
+    
