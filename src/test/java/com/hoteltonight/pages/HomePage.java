@@ -36,6 +36,49 @@ public class HomePage {
 	public WebElement message2;	
 	
 	
+
+	//Anna's tests elements: Social Media Icons
+	
+	@FindBy (xpath ="//a[@href='https://www.instagram.com/hoteltonight']")
+	public WebElement instagramIcon;	
+	
+	@FindBy (xpath ="//a[@href='https://www.facebook.com/hoteltonight']")
+	public WebElement facebookIcon;
+	
+	@FindBy (xpath ="//a[@href='https://www.twitter.com/hoteltonight']")
+	public WebElement twitterIcon;
+	
+	@FindBy (xpath ="//a[@href='https://www.linkedin.com/company/1458830/']")
+	public WebElement linkedinIcon;
+	
+	//Anna's cities
+	@FindBy (xpath ="//a[@href='/l/usa/nevada/las-vegas']")
+	public WebElement lasVegasIcon;
+	
+	@FindBy (xpath ="//a[@href='/l/usa/california/san-diego/downtown']")
+	public WebElement sanDiegoIcon;
+	
+	@FindBy (xpath ="//a[@href='/l/usa/california/los-angeles']")
+	public WebElement losAngelesIcon;
+	
+	@FindBy (xpath ="//a[@href='/l/usa/massachusetts/boston']")
+	public WebElement bostonIcon;
+	
+	@FindBy (xpath ="//a[@href='/l/usa/colorado/denver']")
+	public WebElement denverIcon;
+	
+	@FindBy (xpath ="//a[@href='/l/usa/florida/destin']")
+	public WebElement destinIcon;
+	
+	@FindBy (xpath ="//a[@href='/l/usa/hawaii/honolulu']")
+	public WebElement honoluluIcon;
+	// end Anna's web elements
+			
+			
+				
+
+			
+
 	
 
 	@FindBy (xpath = "//h1[@class='_mq3seu']")
@@ -77,4 +120,5 @@ public class HomePage {
 	@FindBy (xpath = "//a[@href='/l/usa/nevada/las-vegas']")
 	public WebElement LasVegasLink;
 	
+
 }
