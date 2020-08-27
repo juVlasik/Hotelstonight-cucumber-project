@@ -1,4 +1,4 @@
-@temp
+
 Feature: Hotel tonight for every occasion 
 	As a customer, I want to be able to see Hotel tonight for every occasion section
 

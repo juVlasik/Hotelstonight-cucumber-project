@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		tags = "@saha",
+		tags = "@temp",
 		
 		features = "src/test/resources/com/hoteltonight/features",
 		glue = "com/hoteltonight/stepDefs",
