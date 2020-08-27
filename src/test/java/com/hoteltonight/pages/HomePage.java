@@ -2,6 +2,7 @@ package com.hoteltonight.pages;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -16,6 +17,7 @@ public class HomePage {
 		PageFactory.initElements(Driver.getDriver(), this);
 	}
 	
+	//Julia's elements for login tests
 	
 	@FindBy (xpath = "//a[@data-aid='sign-in-link']")
 	public WebElement signInButton;	
@@ -78,7 +80,7 @@ public class HomePage {
 				
 
 			
-
+	//Julia's elements for terms of service/privacy policy links
 	
 
 	@FindBy (xpath = "//h1[@class='_mq3seu']")
@@ -95,6 +97,7 @@ public class HomePage {
 
 	
 	
+	//Julia's elements for login tests
 	
 	@FindBy (xpath = "//h1[@class='_11oy099']")
 	public WebElement message3;	
@@ -113,12 +116,35 @@ public class HomePage {
 	
 	
 	
+	//Julia's elements for cities links tests
 	
-	@FindBy (xpath = "//a[@class='_1yk0k7t']")
+//	@FindBy (xpath = "//a[@class='_1yk0k7t']")
+//	public List<WebElement> citiesLinks;
+	
+	@FindBy (xpath = "//a//h3[@class='cityName_iepax4']")
 	public List<WebElement> citiesLinks;
 	
 	@FindBy (xpath = "//a[@href='/l/usa/nevada/las-vegas']")
 	public WebElement LasVegasLink;
+	
+	public WebElement getCity(String city) {
+		String xpath = "//h3[contains(text(),'"+city+"')]";
+		return Driver.getDriver().findElement(By.xpath(xpath));
+		
+	}
+	
+	public WebElement getActualCity(String city) {
+		String xpath = "(//span[contains(text(),'"+city+"')])[1]";
+		return Driver.getDriver().findElement(By.xpath(xpath));
+		
+	}
+	
+	//Julia's elements for Hotel Partners page
+	
+	@FindBy (xpath = "//div[contains(text(),'Hotel Partners')]")
+	public WebElement hotelPartnersLink;
+	
+	
 	
 
 }
