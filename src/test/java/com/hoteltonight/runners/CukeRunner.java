@@ -9,20 +9,20 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+
 		tags = "@temp",
-		
 		features = "src/test/resources/com/hoteltonight/features",
 		glue = "com/hoteltonight/stepDefs",
 		plugin = {"summary", 
 				 "pretty",
-				 "html:target/builtInReport",
+				 "html:target/builtInReport.html",
 				 "json:target/Cucumber.json" // needed for pretty report
 		
 		}, // summary -> generate unimplemented step definitions in console
 										// pretty -> more detailed output
 		monochrome = true // fixes the ? on the console for windows users
 
-		//,dryRun = true  // skips the step definition execution -> used to generate SDs quickly
+//		,dryRun = true  // skips the step definition execution -> used to generate SDs quickly
 
 		
 		,snippets = SnippetType.CAMELCASE

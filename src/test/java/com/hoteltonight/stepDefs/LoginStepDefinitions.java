@@ -1,5 +1,8 @@
 package com.hoteltonight.stepDefs;
 
+
+import org.junit.Assert;
+
 import com.github.javafaker.Faker;
 import com.hoteltonight.Utilities.BrowserUtilities;
 import com.hoteltonight.Utilities.ConfigReader;
@@ -9,7 +12,7 @@ import com.hoteltonight.pages.HomePage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import junit.framework.Assert;
+
 
 public class LoginStepDefinitions {
 	
@@ -98,5 +101,21 @@ public class LoginStepDefinitions {
 	}
 	
 
+	@When("enter {string} to email field")
+	public void enterToEmailField(String email) {
+		 new HomePage().signInEmailField.sendKeys(email);
+	}
+
+	@When("type {string} in the input box")
+	public void typeInTheInputBox(String password) {
+		new HomePage().signPasswordField.sendKeys(password);
+	}
+
+	@Then("verify the {string}")
+	public void verifyThe(String errorMessage) {
+	    String expected = errorMessage;
+	    String actual = new HomePage().message4.getText();
+	    Assert.assertEquals(expected, actual);
+	}
 
 }
