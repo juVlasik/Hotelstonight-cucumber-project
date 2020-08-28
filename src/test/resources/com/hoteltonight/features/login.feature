@@ -24,6 +24,7 @@ Feature: Login feature
     And verify the error message
     
 #Julia's Sprint 5
+@sprint5
   Scenario Outline: negative login test using multiple credentials using CO
     And enter "<email>" to email field
     And click on Continue button

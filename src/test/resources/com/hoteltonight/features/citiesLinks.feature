@@ -9,12 +9,14 @@ Feature: Checking functionality of links for cities
      
  
   #Julia's Sprint 5
+  @sprint5
      Scenario: verify city link functionality
      When I am on home page
      Then I click on the "Austin" link
      Then I verify that ciy name "Austin"
      
    #Julia's print 5
+   @sprint5
      Scenario: verify city link functionality
      When I am on home page
      Then I click on the "Maui" link
