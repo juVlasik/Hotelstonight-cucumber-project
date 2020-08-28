@@ -1,21 +1,24 @@
 Feature: Checking functionality of links for cities
 
-  #Scenario Outline: verify cities links functionality
-   # Given I am on home page
-   # When I click on "<city>"
-    #Then I verify title of the page
-   # And I go back to the main page
-
-   # Examples: 
-    #  | city          | title                                                      |
-    #  | Chicago       | Best Hotels in Chicago, Illinois - HotelTonight            |
-    #  | San Francisco | Best Hotels in San Francisco, California - HotelTonight    |
-     # | New Orleans   | Best Hotels in French Quarters, New Orleans - HotelTonight |
-
-     
+  #Julia's Sprint 4  
      Scenario: verify Las Vegas link functionality
      When I am on home page
      Then I click on the city link
      Then I verify the title
      And I go back to the main page
+     
+ 
+  #Julia's Sprint 5
+  @sprint5
+     Scenario: verify city link functionality
+     When I am on home page
+     Then I click on the "Austin" link
+     Then I verify that ciy name "Austin"
+     
+   #Julia's print 5
+   @sprint5
+     Scenario: verify city link functionality
+     When I am on home page
+     Then I click on the "Maui" link
+     Then I verify that ciy name "Maui"
      

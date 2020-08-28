@@ -1,5 +1,6 @@
 package com.hoteltonight.stepDefs;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
@@ -10,10 +11,11 @@ import com.hoteltonight.pages.HomePage;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import junit.framework.Assert;
+
 
 public class CitiesLinksStepDefinitions {
 
+	String expectedCity;
 
 @Then("I click on the city link")
 public void iClickOnTheCityLink() {
@@ -25,25 +27,12 @@ public void iClickOnTheCityLink() {
     js.executeScript("window.scrollBy(0,2600)");
     BrowserUtilities.waitFor(5);
     
-	   // for (int i = 1; i <= 3; i++) {
-		
-//        hp.citiesLinks = Driver.getDriver().findElements(By.xpath(
-//    			"//h3[@class='_iepax4']"));
-        
-       // Driver.getDriver().findElement(By.xpath("(//h3[@class='_iepax4'])[" +i+ "]")).click();
-    
-//    Actions a= new Actions(Driver.getDriver()); 
-//    a.moveToElement(hp.LasVegasLink).click().build().perform(); 
+
     js.executeScript("arguments[0].click();", hp.LasVegasLink);
-        //hp.LasVegasLink.click();
-		BrowserUtilities.waitFor(5);
-		
-		
-		//actualLinks.add(Driver.getDriver().getTitle());
-		
-		//Driver.getDriver().navigate().back();
-		
-		BrowserUtilities.waitFor(5);
+    
+    
+	BrowserUtilities.waitFor(5);
+	
         }
 
 
@@ -61,7 +50,32 @@ public void iGoBackToTheMainPage() {
 	Driver.getDriver().navigate().back();
 }
 
-	    
+
+
+
+@Then("I click on the {string} link")
+public void iClickOnTheLink(String city) {
+	HomePage hp = new HomePage();
+	hp.getCity(city).click();
+	BrowserUtilities.waitFor(5);
+	
+    expectedCity = city;
+}
+
+  
+
+
+		
+		@Then("I verify that ciy name {string}")
+		public void iVerifyThatCiyName(String city) {
+			HomePage hp = new HomePage();
+			String actualCity = hp.getActualCity(city).getText();
+			Assert.assertEquals(expectedCity, actualCity); 
+		}
+		
+		
+		
+		
 	}
 
 	
