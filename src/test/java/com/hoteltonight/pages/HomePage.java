@@ -39,7 +39,8 @@ public class HomePage {
 	
 	
 
-	//Anna's tests elements: Social Media Icons
+//Anna's tests elements: 
+	//Social Media Icons
 	
 	@FindBy (xpath ="//a[@href='https://www.instagram.com/hoteltonight']")
 	public WebElement instagramIcon;	
@@ -74,7 +75,36 @@ public class HomePage {
 	
 	@FindBy (xpath ="//a[@href='/l/usa/hawaii/honolulu']")
 	public WebElement honoluluIcon;
-	// end Anna's web elements
+	
+	//Sign Up form
+	@FindBy (xpath ="(//a[@href='#'])[1]")
+	public WebElement signUpButton;
+	
+	@FindBy (xpath="//*[@name='firstName'] ")
+	public WebElement signUpFirstName;
+	
+	@FindBy (xpath="//*[@name='lastName'] ")
+	public WebElement signUpLastName;
+
+	@FindBy (xpath="//*[@name='email'] ")
+	public WebElement signUpEmail;
+	
+	@FindBy (xpath="//*[@name='password'] ")
+	public WebElement signUpPassword;
+	
+	@FindBy (xpath="//*[@name='mobileNumber'] ")
+	public WebElement signUpMobileNum;
+
+	@FindBy (xpath="//*[@class='_mak5v0d'] ")
+	public WebElement signUpSubmitButton;
+	
+	@FindBy (xpath = "//h1[@class='_11oy099']")
+	public WebElement signUpReturnCustomerMessage;
+	
+	@FindBy (xpath = "//*[@class='_mak5v0d']")
+	public WebElement signUpReturnCustomerGotItButton;
+	
+// end of Anna's web elements
 			
 			
 				

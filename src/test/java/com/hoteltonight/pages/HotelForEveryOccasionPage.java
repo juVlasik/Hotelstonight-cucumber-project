@@ -26,6 +26,7 @@ public class HotelForEveryOccasionPage {
 	public static final String expectedBuildingText = "Let's have a threeday. Score weekend getaways in cities you love.";
 	
 	public static final String expectedCalendarText = "Go big on your bucket list. Book in advance. Zero stress.";
+	 
 	
 	
 	

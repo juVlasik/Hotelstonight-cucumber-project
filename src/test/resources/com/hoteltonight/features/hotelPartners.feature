@@ -2,6 +2,7 @@ Feature: Hotel Partners
   As a user, I want to be able to sign up as a hotel partner
 
 #Julia's Sprint 5
+@sprint5
   Scenario: hotel partner sign up using Custom typa, POJO and Transformer
     Given I am on home page
     When I click on hotel partners link
@@ -10,3 +11,14 @@ Feature: Hotel Partners
     
       | hotelName | firstName | lastName | phoneNo    | city       |
       | Local B&B | Julia     | Cruz     | 5711231234 | Alexandria |
+
+      
+      
+      
+#Julia's Sprint 5
+@sprint5
+  Scenario: hotel partner sign up using Excel file
+    Given I am on home page
+    When I click on hotel partners link
+    When I pass sign up credentials from Excel file
+    
