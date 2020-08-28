@@ -113,12 +113,16 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
 					<testFailureIgnore>true</testFailureIgnore>
+					
 					<includes>
-
+                      <!--  <include>${runner}</include>  -->
 						<include>**/*CukeRunner.java</include>
+						<include>**/*FailedScenariosRunner.java</include>
+						
 					</includes>
 				</configuration>
 			</plugin>
+			
 			<plugin>
 				<groupId>net.masterthought</groupId>
 				<artifactId>maven-cucumber-reporting</artifactId>
@@ -131,7 +135,7 @@
 							<goal>generate</goal>
 						</goals>
 						<configuration>
-							<projectName>Automation Practice Project</projectName>
+							<projectName>Hoteltonigh Project</projectName>
 
 							<!-- output directory for the generated report -->
 							<outputDirectory>${project.build.directory}/pretty-html-report</outputDirectory>

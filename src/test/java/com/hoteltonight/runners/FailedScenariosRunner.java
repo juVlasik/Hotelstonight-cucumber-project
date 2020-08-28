@@ -9,30 +9,25 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-
-
-		tags = "@sprint5",
-
-				//tags = "@temp",
-
-		features = "src/test/resources/com/hoteltonight/features",
+		
+		
+		features = "@target/failed.txt",
 		glue = "com/hoteltonight/stepDefs",
-		plugin = {"summary", 
-				 "pretty",
-				 "html:target/builtInReport.html",
+		plugin = {"summary",
+				
+				
+				 "html:target/builtInReport",
 				 "json:target/Cucumber.json" // needed for pretty report
 		
 		}, // summary -> generate unimplemented step definitions in console
 										// pretty -> more detailed output
 		monochrome = true // fixes the ? on the console for windows users
-
-//		,dryRun = true  // skips the step definition execution -> used to generate SDs quickly
-
+//			,dryRun = true  // skips the step definition execution -> used to generate SDs quickly
 		
 		,snippets = SnippetType.CAMELCASE
 		,stepNotifications = true
 		)
 
-public class CukeRunner {
+public class FailedScenariosRunner {
 
 }
