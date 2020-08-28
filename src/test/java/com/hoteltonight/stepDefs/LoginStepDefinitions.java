@@ -41,7 +41,7 @@ public class LoginStepDefinitions {
 	@Then("verify the message")
 	public void verifyTheMessage() {
 		String actual = new HomePage().message.getText();
-		String expected = "We’ll email you a link that’ll sign you in with one tap. Easy as it sounds.";
+		String expected = "We'll email you a link that'll sign you in with one tap. Easy as it sounds.";
 		Assert.assertEquals(expected, actual);
 	}
 
@@ -71,7 +71,7 @@ public class LoginStepDefinitions {
 	
 	@Then("verify another message")
 	public void verifyAnotherMessage() {
-	   String expected = "One tap, you’re in";
+	   String expected = "One tap, youï¿½re in";
 	   String actual = new HomePage().message3.getText();
 	}
 

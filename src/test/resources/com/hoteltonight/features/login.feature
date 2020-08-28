@@ -1,6 +1,6 @@
 Feature: Login feature
   As a customer, I want to be able to login using login pop-up
-
+  
   Background: 
     Given I am on home page
     When I click on Sign In button
@@ -22,8 +22,8 @@ Feature: Login feature
     Then type password in the input box
     Then click on Sign In button one more time
     And verify the error message
-    
-#Julia's Sprint 5
+   
+    @temp
   Scenario Outline: negative login test using multiple credentials using CO
     And enter "<email>" to email field
     And click on Continue button
