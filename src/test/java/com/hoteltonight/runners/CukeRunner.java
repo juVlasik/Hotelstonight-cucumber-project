@@ -10,10 +10,11 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
+
 		//tags = "@sprint5",
 
 				tags = "@temp",
-		
+
 		features = "src/test/resources/com/hoteltonight/features",
 		glue = "com/hoteltonight/stepDefs",
 		plugin = {"summary", 
